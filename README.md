@@ -1,4 +1,4 @@
-ws-cli-adfs
+# aws-cli-adfs
 This project provides *aws-adfs-login* script which can be used to get AWS session credentials using authentication based on SAML and Active Directory Federation Services.
 To use this script you have to have your Active Directory Federation Services configured and working and please make sure you are able to login to AWS Console before you try to use the script.
 
