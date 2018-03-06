@@ -51,4 +51,4 @@ The script is compatible with [AdfsTotpAuthenticationProvider](https://github.co
 The code is based on [the article](https://aws.amazon.com/blogs/security/how-to-implement-a-general-solution-for-federated-apicli-access-using-saml-2-0/) and sample code provided there.
 
 ## License
-MIT, see [details](LICENSE.md).
+MIT, see [details](LICENSE).
