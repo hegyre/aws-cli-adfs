@@ -42,6 +42,16 @@ idp_role_arn = arn:aws:iam::123456789013:role/administrators
 ## MFA support
 The script is compatible and was tested with [AdfsTotpAuthenticationProvider](https://github.com/tomaszkiewicz/AdfsTotpAuthenticationProvider) - the other project I have developed which provides easy to use TOTP-based (Google Authenticator, Authy and others) adapter for MFA.
 
+## Extended session duration
+
+Since 29.03.2018 [AWS supports extended session duration](https://aws.amazon.com/blogs/security/enable-federated-api-access-to-your-aws-resources-for-up-to-12-hours-using-iam-roles/) for STS. To take advantage of that you have to first set max session duration attribute for the role you want to assume:
+
+```
+aws iam update-role --role-name developers --max-session-duration 43200
+```
+
+Then you have to add ```idp_session_duration = 43200``` to the profile definition in ~/.aws/config file.
+
 ## Compatibility
 The script was written with ADFS in mind but it's possible that it will work also with other IdP.
 The script was tested with ADFS working on Windows Server 2016.
